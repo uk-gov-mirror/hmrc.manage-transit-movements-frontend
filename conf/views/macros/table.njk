@@ -50,19 +50,19 @@
 
         <div class="govuk-summary-list">
             <div class="govuk-summary-list__row">
-                <span class="govuk-summary-list__key govuk-!-width-full govuk-!-font-weight-bold">{{ messages("viewDepartures.table.updated") }}</span>
-                <span class="govuk-summary-list__key govuk-!-width-full govuk-!-font-weight-bold">{{ messages("viewDepartures.table.lrn") }}</span>
-                <span class="govuk-summary-list__key govuk-!-width-full govuk-!-font-weight-bold">{{ messages("viewDepartures.table.status") }}</span>
-                <span class="govuk-summary-list__key govuk-!-width-full govuk-!-font-weight-bold">{{ messages("viewDepartures.table.action") }}</span>
+                <span class="govuk-summary-list__key govuk-!-width-10 govuk-!-font-weight-bold">{{ messages("viewDepartures.table.updated") }}</span>
+                <span class="govuk-summary-list__key govuk-!-width-30 govuk-!-font-weight-bold">{{ messages("viewDepartures.table.lrn") }}</span>
+                <span class="govuk-summary-list__key govuk-!-width-30 govuk-!-font-weight-bold">{{ messages("viewDepartures.table.status") }}</span>
+                <span class="govuk-summary-list__key govuk-!-width-30 govuk-!-font-weight-bold">{{ messages("viewDepartures.table.action") }}</span>
             </div>
 
             {% for row in rows %}
 
                 <div class="govuk-summary-list__row">
-                    <span class="govuk-summary-list__value govuk-!-width-full">{{ row.updatedTime }}</span>
-                    <span class="govuk-summary-list__value govuk-!-width-full">{{ row.localReferenceNumber }}</span>
-                    <span class="govuk-summary-list__value govuk-!-width-full">{{ messages(row.status) }}</span>
-                    <span class="govuk-summary-list__value govuk-!-width-full">
+                    <span class="govuk-summary-list__value govuk-!-width-10">{{ row.updatedTime }}</span>
+                    <span class="govuk-summary-list__value govuk-!-width-30">{{ row.localReferenceNumber }}</span>
+                    <span class="govuk-summary-list__value govuk-!-width-30">{{ messages(row.status) }}</span>
+                    <span class="govuk-summary-list__value govuk-!-width-30">
 
                    {% for action in row.actions %}
                        <a id="{{ messages(action.key) }}-{{ row.lrn }}"
