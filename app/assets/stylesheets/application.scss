@@ -1,6 +1,8 @@
-$govuk-assets-path: "/homepage-frontend-example/assets/lib/govuk-frontend/govuk/assets/";
+$govuk-assets-path: "/manage-transit-movements-frontend/assets/lib/govuk-frontend/govuk/assets/";
+$hmrc-assets-path: "/manage-transit-movements-frontend/assets/lib/hmrc-frontend/hmrc/assets/";
 
 @import "lib/govuk-frontend/govuk/all";
 @import "language-toggles.scss";
 @import "components/header.scss";
 @import 'components/hmrc-responsive-tables';
+@import "_timeout-dialog.scss";

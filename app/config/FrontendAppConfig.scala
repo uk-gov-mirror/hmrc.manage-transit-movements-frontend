@@ -53,6 +53,8 @@ class FrontendAppConfig @Inject()(configuration: Configuration) {
   lazy val referenceDataUrl: String = configuration.get[Service]("microservice.services.reference-data").baseUrl
   lazy val routerUrl: String        = configuration.get[Service]("microservice.services.testOnly-router").baseUrl
   lazy val enrolmentKey: String     = configuration.get[String]("keys.enrolmentKey")
+  lazy val timeoutSeconds: String   = configuration.get[String]("session.timeoutSeconds")
+  lazy val countdownSeconds: String = configuration.get[String]("session.countdownSeconds")
 
   lazy val nctsEnquiriesUrl: String = configuration.get[String]("urls.nctsEnquiries")
   lazy val loginHmrcService: String = configuration.get[String]("urls.loginHmrcService")
