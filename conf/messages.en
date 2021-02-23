@@ -56,10 +56,10 @@ session_expired.guidance = The details you have given have been deleted because 
 
 unauthorised.title = You cannot use this service
 unauthorised.heading = You cannot use this service
-unauthorised.if.you.are.waiting.for.an.eori.number = You must have an account with an activated EORI number.
-unauthorised.you.must.have.an.account = If you are waiting for an EORI number to be activated, you can try to
-unauthorised.sign.in.to.HMRC.services = sign in to HMRC services
-unauthorised.again.later = again later.
+unauthorised.paragraph1.1 = You must
+unauthorised.paragraph1.2 = request access to NCTS
+unauthorised.paragraph1.3 = before you can use this service.
+unauthorised.paragraph2 = If you already have access, you must contact your group administrator to update your access rights.
 
 viewArrivalNotifications.title                      = Arrival notifications
 viewArrivalNotifications.heading                    = Arrival notifications

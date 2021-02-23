@@ -16,8 +16,10 @@
 
 package controllers
 
+import config.FrontendAppConfig
 import javax.inject.Inject
 import play.api.i18n.I18nSupport
+import play.api.libs.json.Json
 import play.api.mvc.{Action, AnyContent, MessagesControllerComponents}
 import renderer.Renderer
 import uk.gov.hmrc.play.bootstrap.frontend.controller.FrontendController
@@ -26,13 +28,17 @@ import scala.concurrent.ExecutionContext
 
 class UnauthorisedController @Inject()(
   cc: MessagesControllerComponents,
-  renderer: Renderer
+  renderer: Renderer,
+  appConfig: FrontendAppConfig
 )(implicit ec: ExecutionContext)
     extends FrontendController(cc)
     with I18nSupport {
 
   def onPageLoad: Action[AnyContent] = Action.async {
     implicit request =>
-      renderer.render("unauthorised.njk").map(Ok(_))
+      val json = Json.obj(
+        "requestNCTSAccess" -> appConfig.requestNCTSAccess
+      )
+      renderer.render("unauthorised.njk", json).map(Ok(_))
   }
 }

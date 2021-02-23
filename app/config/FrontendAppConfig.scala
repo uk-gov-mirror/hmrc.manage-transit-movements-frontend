@@ -59,6 +59,7 @@ class FrontendAppConfig @Inject()(configuration: Configuration) {
   lazy val enrolmentKey: String       = configuration.get[String]("keys.enrolmentKey")
 
   lazy val nctsEnquiriesUrl: String = configuration.get[String]("urls.nctsEnquiries")
+  val requestNCTSAccess: String     = configuration.get[String]("urls.requestNCTSAccess")
   lazy val loginHmrcService: String = configuration.get[String]("urls.loginHmrcService")
   lazy val timeoutSeconds: String   = configuration.get[String]("session.timeoutSeconds")
   lazy val countdownSeconds: String = configuration.get[String]("session.countdownSeconds")
